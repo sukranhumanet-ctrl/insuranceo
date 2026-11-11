@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Insurance Insight – Practical Insurance, Loan & Money Guides</title>
+<meta name="description" content="Independent, plain-language guides on insurance, loans and personal finance.">
+<link rel="canonical" href="https://insuranceo.vercel.app">
+<meta name="google-adsense-account" content="ca-pub-8476774265191060">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8476774265191060" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--ink:#0d1526;--muted:#5b6479;--line:#e3e7f0;--brand:#2547f4;--brand-ink:#fff;--soft:#e8edff;--ins:#2547f4;--loan:#0f9d7a;--fin:#d9822b;
+--display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Plus Jakarta Sans",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--surface:#141b30;--ink:#eef1fa;--muted:#9aa4bd;--line:#232c47;--brand:#6b86ff;--brand-ink:#0b1020;--soft:#1b2547;--ins:#7f95ff;--loan:#3dd6ad;--fin:#f0a25a}}
+:root[data-theme="dark"]{--bg:#0b1020;--surface:#141b30;--ink:#eef1fa;--muted:#9aa4bd;--line:#232c47;--brand:#6b86ff;--brand-ink:#0b1020;--soft:#1b2547;--ins:#7f95ff;--loan:#3dd6ad;--fin:#f0a25a}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);color-scheme:light dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font:700 20px var(--display);display:flex;align-items:center;gap:8px}
+.logo i{width:28px;height:28px;border-radius:9px;background:var(--brand);display:grid;place-items:center;color:var(--brand-ink);font-style:normal;font-size:15px}
+nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+nav a{padding:8px 14px;border-radius:99px;font-weight:500;font-size:14px;color:var(--muted);white-space:nowrap}
+nav a:hover,nav a[aria-current]{background:var(--soft);color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px;flex:none}
+.hero{padding:64px 0 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:700}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:52ch;margin:20px 0 28px}
+.search{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px;max-width:460px}
+.search input{flex:1;border:0;background:none;color:var(--ink);font:inherit;padding:0 16px;min-width:0;outline:none}
+.btn{border:0;background:var(--brand);color:var(--brand-ink);font:600 15px var(--body);padding:11px 22px;border-radius:99px;cursor:pointer}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:28px}
+.calc h2{font-size:22px;margin-bottom:4px}
+.calc small{color:var(--muted)}
+.calc label{display:block;font-size:13px;font-weight:600;margin:18px 0 6px;display:flex;justify-content:space-between}
+.calc output{color:var(--brand)}
+.calc input[type=range]{width:100%;accent-color:var(--brand)}
+.result{margin-top:22px;background:var(--soft);border-radius:18px;padding:18px 20px}
+.result b{display:block;font:700 34px var(--display);color:var(--brand)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 28px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 16px;border-radius:99px;font:500 14px var(--body);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sec-h{display:flex;justify-content:space-between;align-items:end;margin:24px 0 16px}
+.sec-h h2{font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:12px;min-height:210px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--brand)}
+.card.big{grid-column:span 2;background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.card.big .tag,.card.big p{color:inherit;opacity:.9}
+.card h3{font-size:21px}
+.card.big h3{font-size:32px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .meta{margin-top:auto;font-size:13px;color:var(--muted)}
+.card.big .meta{color:inherit}
+.tag{font-size:13px;font-weight:600}
+.tag.insurance{color:var(--ins)}.tag.loans{color:var(--loan)}.tag.finance{color:var(--fin)}
+.empty{grid-column:1/-1;padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:22px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:56px 0}
+.cat{border-radius:22px;padding:26px;background:var(--soft)}
+.cat h3{font-size:22px;margin-bottom:6px}.cat p{margin:0;color:var(--muted);font-size:15px}
+.article{max-width:680px;margin:0 auto;padding:56px 0 24px}
+.article h1{font-size:clamp(32px,5vw,50px);margin:10px 0 16px}
+.article p{font-size:18px;margin:0 0 20px}
+.back{display:inline-block;margin-bottom:16px;color:var(--muted);font-weight:500}
+.note{background:var(--soft);border-radius:16px;padding:16px 20px;font-size:15px!important;color:var(--muted)}
+.page{max-width:680px;margin:0 auto;padding:56px 0}
+.page h1{font-size:44px;margin-bottom:20px}
+.page input,.page textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:4px 0 16px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:32px 0;color:var(--muted);font-size:14px}
+footer nav{margin:0 0 12px;padding:0}
+footer nav a{padding-left:0}
+.sr{position:absolute;left:-9999px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:36px}.grid,.cats{grid-template-columns:1fr}.card.big{grid-column:auto}.bar{gap:10px}.logo span{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#home" aria-label="Insurance Insight home"><i>◆</i><span>Insurance Insight</span></a>
+<nav id="nav" aria-label="Main"></nav>
+<button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+</div></header>
+<main class="wrap" id="app"></main>
+<footer><div class="wrap">
+<nav aria-label="Footer"><a href="#about">About</a><a href="#contact">Contact</a><a href="#privacy">Privacy Policy</a><a href="#disclaimer">Disclaimer</a></nav>
+© 2026 Insurance Insight. Educational content only – not financial, legal or insurance advice.
+</div></footer>
+<script>
+const CATS={insurance:["Insurance","Coverage, premiums and claims, explained without jargon."],loans:["Loans","Rates, terms and repayment, so you borrow with confidence."],finance:["Finance","Budgeting and saving habits that hold up in real life."]};
+const POSTS=[
+{id:"health-insurance",c:"insurance",t:"How to choose health insurance without overpaying",m:6,s:"Compare deductibles, networks and out-of-pocket limits before you look at the monthly price.",b:["A low premium often hides a high deductible. Add up the premium for the year, then add the most you could pay out of pocket. That total is your real worst-case cost.","Check that your doctors and regular prescriptions are covered. A cheaper plan that excludes them is not cheaper."]},
+{id:"term-vs-whole",c:"insurance",t:"Term vs whole life: which one fits you?",m:5,s:"One covers a set period at a low price. The other lasts for life and builds cash value.",b:["Term life pays out if you die within a fixed period, such as 20 years. It suits people with dependants and a mortgage who need large cover at low cost.","Whole life costs more because it lasts for life and builds a cash value. Ask for the fees and the surrender terms before you sign."]},
+{id:"car-premium",c:"insurance",t:"7 things that change your car insurance premium",m:4,s:"Age, mileage, location and claims history all matter. Some of them you can change.",b:["Insurers price risk. Your driving record, how far you drive, where you park and the car you own all shift the price.","Raising your excess, bundling policies and paying annually usually lower the cost. Always compare the cover, not only the price."]},
+{id:"loan-interest",c:"loans",t:"How personal loan interest is really calculated",m:7,s:"Interest rate, APR and fees are different numbers. Here is how to read them.",b:["The interest rate is the cost of borrowing. The APR adds fees, so it is the better number for comparing offers.","Early payments are mostly interest. Over time more of each payment reduces the balance. Use the calculator on the home page to see your monthly figure."]},
+{id:"early-payoff",c:"loans",t:"Should you pay off your loan early?",m:5,s:"It can save a lot of interest, unless there are early repayment charges.",b:["Paying early cuts the total interest you pay. Check for penalty fees first, since some lenders charge for it.","If you have higher-rate debt or no emergency fund, deal with those before you overpay a low-rate loan."]},
+{id:"fixed-variable",c:"loans",t:"Fixed vs variable rates explained",m:4,s:"Certainty or flexibility: the trade-off behind every rate choice.",b:["A fixed rate stays the same for the whole term, so budgeting is easy. A variable rate moves with the market and can fall or rise.","Choose fixed if a payment rise would strain your budget. Choose variable if you can absorb changes or plan to repay soon."]},
+{id:"emergency-fund",c:"finance",t:"Build an emergency fund in 6 steps",m:6,s:"Start with one month of expenses. Automate it. Keep it separate.",b:["Set a first target of one month of essential costs, then work up to three to six months. A small start beats waiting for a perfect plan.","Open a separate savings account and automate a transfer on payday. Money you do not see is money you do not spend."]},
+{id:"budget-503020",c:"finance",t:"The 50/30/20 budget, adjusted for real life",m:5,s:"A simple split of needs, wants and savings that you can bend to your income.",b:["The rule gives half of income to needs, 30% to wants and 20% to savings and debt. It is a starting point, not a law.","If rent takes more than 50%, shrink wants first and keep a smaller savings habit going. Consistency matters more than the exact split."]}
+];
+const $=s=>document.querySelector(s),app=$("#app");
+let filter="all",q="";
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function card(p,big){return `<a class="card${big?" big":""}" href="#${p.id}"><span class="tag ${p.c}">${CATS[p.c][0]}</span><h3>${p.t}</h3><p>${p.s}</p><span class="meta">${p.m} min read</span></a>`}
+function list(){const r=POSTS.filter(p=>(filter==="all"||p.c===filter)&&(p.t+p.s).toLowerCase().includes(q.toLowerCase()));
+$("#grid").innerHTML=r.length?r.map((p,i)=>card(p,i===0&&filter==="all"&&!q)).join(""):`<div class="empty">No guides match “${esc(q)}”. Try a different word or clear the filter.</div>`;
+document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.f===filter))}
+function pay(){const P=+$("#amt").value,y=+$("#yrs").value,r=+$("#rate").value/1200,n=y*12;
+const m=r?P*r/(1-Math.pow(1+r,-n)):P/n,fmt=v=>new Intl.NumberFormat("en",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(v);
+$("#oa").textContent=fmt(P);$("#oy").textContent=y+" years";$("#or").textContent=(+$("#rate").value).toFixed(1)+"%";
+$("#pm").textContent=fmt(m);$("#ti").textContent="Total interest: "+fmt(m*n-P)}
+function home(){app.innerHTML=`<section class="hero"><div><h1>Money guides that speak plainly.</h1><p class="lead">Independent explainers on insurance, loans and personal finance. No jargon, no sales pitch.</p>
+<form class="search" role="search" onsubmit="return false"><label class="sr" for="q">Search guides</label><input id="q" type="search" placeholder="Search guides, e.g. deductible" value="${esc(q)}"><button class="btn" type="button" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">Search</button></form></div>
+<div class="calc"><h2>Loan payment calculator</h2><small>See your monthly cost before you borrow.</small>
+<label for="amt">Amount <output id="oa"></output></label><input id="amt" type="range" min="1000" max="100000" step="500" value="15000">
+<label for="rate">Interest rate <output id="or"></output></label><input id="rate" type="range" min="0" max="25" step="0.1" value="7.5">
+<label for="yrs">Term <output id="oy"></output></label><input id="yrs" type="range" min="1" max="10" step="1" value="5">
+<div class="result"><small>Monthly payment</small><b id="pm"></b><small id="ti"></small></div></div></section>
+<div class="sec-h"><h2>Latest guides</h2></div>
+<div class="chips" role="group" aria-label="Filter by category"><button class="chip" data-f="all">All</button>${Object.keys(CATS).map(k=>`<button class="chip" data-f="${k}">${CATS[k][0]}</button>`).join("")}</div>
+<div class="grid" id="grid"></div>
+<div class="cats">${Object.keys(CATS).map(k=>`<a class="cat" href="#cat-${k}"><h3>${CATS[k][0]}</h3><p>${CATS[k][1]}</p></a>`).join("")}</div>`;
+document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{filter=c.dataset.f;list()});
+$("#q").oninput=e=>{q=e.target.value;list()};
+["amt","rate","yrs"].forEach(i=>$("#"+i).oninput=pay);pay();list()}
+const PAGES={about:["About","Insurance Insight publishes independent, plain-language guides on insurance, loans and personal finance. We do not sell policies or loans, and we explain trade-offs so you can decide for yourself."],privacy:["Privacy Policy","This site does not require an account. If you send us a message, we use your details only to reply. Third-party vendors, including Google, use cookies to serve ads based on your previous visits to this and other websites. Google’s advertising cookies let it and its partners serve ads to you based on your visit to this site. You can opt out of personalised advertising at google.com/settings/ads."],disclaimer:["Disclaimer","Content is educational only and is not financial, legal or insurance advice. Speak to a licensed professional before making decisions."]};
+function route(){const h=location.hash.slice(1)||"home";filter="all";q="";
+document.querySelectorAll("#nav a").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")==="#"+(h.startsWith("cat-")?h:"home")&&(h==="home"||h.startsWith("cat-"))));
+const p=POSTS.find(x=>x.id===h);scrollTo(0,0);
+if(h==="home")return home();
+if(h.startsWith("cat-")&&CATS[h.slice(4)]){const k=h.slice(4);app.innerHTML=`<div class="page" style="max-width:none"><h1>${CATS[k][0]}</h1><p style="color:var(--muted);font-size:18px">${CATS[k][1]}</p><div class="grid" style="margin-top:28px">${POSTS.filter(x=>x.c===k).map(x=>card(x)).join("")}</div></div>`;return}
+if(p){app.innerHTML=`<article class="article"><a class="back" href="#cat-${p.c}">← Back to ${CATS[p.c][0]}</a><br><span class="tag ${p.c}">${CATS[p.c][0]}</span><h1>${p.t}</h1><p style="color:var(--muted)">${p.m} min read</p><p>${p.s}</p>${p.b.map(x=>`<p>${x}</p>`).join("")}<p class="note">Educational content only. Check terms with your provider.</p></article>`;return}
+if(PAGES[h]){app.innerHTML=`<div class="page"><h1>${PAGES[h][0]}</h1><p style="font-size:18px">${PAGES[h][1]}</p></div>`;return}
+if(h==="contact"){app.innerHTML=`<div class="page"><h1>Contact</h1><p>Questions or corrections? Send us a note.</p><label for="n">Name</label><input id="n"><label for="e">Email</label><input id="e" type="email"><label for="m">Message</label><textarea id="m" rows="5"></textarea><button class="btn" id="send">Send message</button><p id="ok" role="status"></p></div>`;$("#send").onclick=()=>{$("#ok").textContent="Message sent. We reply within 2 working days."};return}
+location.hash="home"}
+$("#nav").innerHTML=`<a href="#home">Home</a>${Object.keys(CATS).map(k=>`<a href="#cat-${k}">${CATS[k][0]}</a>`).join("")}`;
+$("#theme").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme?d.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;d.dataset.theme=dark?"light":"dark"};
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
